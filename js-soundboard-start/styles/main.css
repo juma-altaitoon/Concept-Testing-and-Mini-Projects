@@ -1,0 +1,50 @@
+header{
+    text-align: center;
+    height: 180px;
+}
+#gridContainer {
+    background: maroon;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 400px;
+    height: 400px; 
+    padding: 5px 0 0 0;  
+    border-radius: 12px;
+}
+#gridContainer * {
+    background-color: black;
+    border: solid turquoise;
+    border-radius: 5px;
+    width: 20%;
+    height: 20%;
+    border: solid ;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin: 1%;
+    
+}
+body {
+    background : darkblue
+    
+}
+button{    
+    color: black;
+    border: solid black;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+}
+p {
+    color:blue;
+    font-size: 20px;
+    bottom: 0
+}
+img {
+    width: 200px;
+    height: 150px;
+    
+
+}

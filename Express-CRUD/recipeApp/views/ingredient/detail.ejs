@@ -1,0 +1,17 @@
+<div>
+    <div>
+        <h3><%= ingredient.name %> </h3>
+        <div>Origin: <%= ingredient.origin %></div>
+
+    <br>
+
+    <br>
+    <% ingredient.recipe.forEach(function(recipe){ %>
+    <hr>
+      <div>
+        <div class="recipe">Recipe: <%= recipe.title %></div>
+        <div class="recipe">Author: <%= recipe.author %></div>
+      </div>
+      <% }) %>
+
+</div>

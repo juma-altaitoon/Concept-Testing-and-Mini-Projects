@@ -1,0 +1,13 @@
+body{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+th {
+    color: white;
+}
+nav {
+    background-color: rgb(243, 95, 95);
+    
+}

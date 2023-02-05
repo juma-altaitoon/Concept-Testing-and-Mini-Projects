@@ -1,0 +1,32 @@
+<h1> Edit Recipe </h1>
+
+<form method="POST" action="/recipe/update?_method=PUT">
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" name="title" value="<%= recipe.title %>"  class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Author</label>
+        <input type="text" name="author" value="<%= recipe.author %>"  class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Ingredients</label>
+        <select name="ingredient[]" multiple="multiple" class="form-control">
+            <% recipe.ingredient.forEach(function(ingredient){ %>
+                <option value="<%= ingredient._id %>"><%= ingredient.name %></option>
+            <% }) %>
+    <br>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="form-group">
+        <label>Instructions</label>
+        <input type="text" name="instructions" value="<%= recipe.instructions %>"  class="form-control">
+    </div>
+
+    <input type="hidden" name="id" value="<%= recipe._id %>"  class="form-control">
+    <br>
+    <button type="submit" class="btn btn-primary">Update Recipe</button>
+
+</form>

@@ -1,0 +1,27 @@
+<h2> <%= recipe.title %> </h2>
+
+<div>
+    Author: <%= recipe.author %>
+</div>
+
+<div>
+    Instructions: <%= recipe.instructions %>
+</div>
+
+<div>
+    Created At: <%= moment(recipe.createdAt).fromNow() %>
+</div>
+
+<div>
+    Updated At: <%= moment(recipe.updatedAt).fromNow() %>
+</div>
+<hr>
+<div>
+    <h4>Ingredients:</h4> 
+    <% recipe.ingredient.forEach(function(ingredient){ %>
+    <hr>
+    <div class="ingredient"> 
+    <div><%= ingredient.name %>, Origin: <%= ingredient.origin %></div>
+  </div>
+</div>
+<% }) %>

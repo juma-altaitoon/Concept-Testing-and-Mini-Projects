@@ -1,0 +1,21 @@
+<h1> Ingredients </h1>
+
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Origin</th>
+    
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+
+<% ingredient.forEach(function(ingredient){ %> 
+    <tr>
+        <td><a href="/ingredient/detail?id=<%= ingredient._id %>"><%= ingredient.name %> </a></td>
+        <td><%= ingredient.origin %></td>
+        
+        <td><a href="/ingredient/edit?id=<%= ingredient._id %>">Edit</a></td>
+        <td><a href="/ingredient/delete?id=<%= ingredient._id %>">Delete</a></td>
+    </tr>
+<% }) %>
+</table>

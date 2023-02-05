@@ -1,0 +1,19 @@
+<h1>Skills List</h1>
+<hr>
+<div><a href="/app/views/createSkill.ejs">Add Skill</a></div>
+<table>
+    <tr>
+        <th>Skills</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    
+    <% data.forEach(function(data, index) { %>
+    <tr>
+        <td><%= data %></td>
+        <td> <a href="/skills/edit?id=<%= index %>">Edit</a></td>
+        <td> <a href="/skills/delete?id=<%= index %>">Delete</a></td>
+    </tr>
+    <% }) %>
+    
+</table>

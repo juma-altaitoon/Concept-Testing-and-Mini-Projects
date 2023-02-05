@@ -1,0 +1,171 @@
+/*
+google font: Nunito
+
+brand red: #ff5358
+dark red: #e00007
+background grey: #efefef
+title grey: #edefed
+footer grey: #2B2D2E
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+body {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    max-width: 100%;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    height: 50px;
+    width: 100%;
+}
+img.logo {
+    height: 70%;
+    margin: 10px 20px ;
+}
+.login-signup {
+    display: flex;
+    flex-flow: row wrap;
+    height: 70%;
+    margin-right: 20px;       
+}
+#signup, #login {
+    margin: 5px 5px;
+    padding: 5px;
+}
+
+.city-container {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;   
+}
+img.city {
+    filter: brightness(50%);
+    max-width: 100%;
+}
+
+.on-pic { 
+    position: absolute;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    width: 32%;
+}
+
+h1 {
+    font-size: 60px;
+}
+  
+.procon {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    background-color: #efefef;
+    padding: 20px;
+
+}
+section {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    
+}
+.icon {
+    width: 20%;
+    height: 30%px;
+}
+.pros, .cons {
+    margin: 10px;  
+    border: 1px solid black;
+}
+.featured {
+    margin: 10px;
+    padding: 10px;
+}
+.SideBySideContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 5px; 
+}
+.location{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 30%;
+}
+.location img {
+    filter: brightness(50%);
+}
+.on-pic2 {
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 5px;
+}
+p {
+    padding: 5px;
+    margin: 0;
+    font-size: 15px;
+}
+
+.content {
+    position:relative;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: left;    
+    background-color: #efefef;
+    color: black;
+    height:30%;
+    padding-bottom: 10%;   
+}
+.on-pic button {
+    margin: 0 auto;
+}
+button {
+    background-color: #ff5358;
+    color: #edefed;
+    width: 240px;
+    height: 50px;
+    font-size: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+footer {
+    position: fixed;
+    background-color: #2B2D2E;
+    color: white;
+    font-size: smaller;
+    position: absolute;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 100%;
+    
+}

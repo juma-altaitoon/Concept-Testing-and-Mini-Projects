@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Collector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+    <header class="navbar-fixed" >
+        <nav class="black gradient-shadow">
+            <div class="nav-wrapper">
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;Car_Collector</a>
+                    </li>
+                </ul>
+
+                <ul class="right">
+                    <li><a href="{% url 'about' %}">About</a></li>
+                   
+                   {% if user.is_authenticated %}
+                    <li><a href="{% url 'cars_create' %}">Add a Car</a></li>
+                    <li><a href="{% url 'index' %}">View My Cars</a></li>
+                    <li><a href="{% url 'features_create' %}">Add Feature</a></li>
+                    <li><a href="{% url 'features_index' %}">View Features</a></li>
+
+                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+                    <li class="blue-text">Welcome {{ user.username }}  </li>
+                    {% else %}
+                    <li><a href="{% url 'login' %}">Log In</a></li>
+                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
+
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+    <footer class="page-footer grey">
+        <div class="right">
+            All Rights Reserved, &copy; 2022 Collector
+        </div>
+    </footer>
+</body>
+</html>    
